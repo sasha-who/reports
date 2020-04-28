@@ -26,15 +26,28 @@ body {
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  color: #220c38;
+  color: #6f4575;
 
   background-color: #f5edfc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  box-sizing: border-box;
+}
+
+.chart__data {
+  max-width: 500px;
 }
 
 .chart__course-selection {
   display: flex;
   flex-direction: column;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   border: none;
@@ -54,13 +67,59 @@ body {
   top: calc(50% - 10px);
   left: 0;
 
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 
   background-color: #ae95c7;
   border-radius: 50%;
 }
 
 .chart__course-selection-item:checked + .chart__course-selection-title::before {
-  background-color: #220c38;
+  background-color: #6f4575;
+}
+
+.chart__statistics {
+  display: flex;
+  flex-direction: row;
+  max-width: 200px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  border: none;
+}
+
+.chart__statistics-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.chart__percentage-number {
+  max-width: 50px;
+  margin-left: auto;
+  margin-right: 5px;
+
+  color: #6f4575;
+
+  border: 1px solid #6f4575;
+  border-radius: 5px;
+  background-color: #f5edfc;
+}
+
+.chart__submit-button {
+  margin: 0;
+  padding: 5px;
+
+  color: #6f4575;
+
+  border: 1px solid #6f4575;
+  border-radius: 5px;
+  background-color: #f5edfc;
+  cursor: pointer;
+}
+
+.chart__submit-button:hover,
+.chart__submit-button:focus {
+  background-color: #ae95c7;
 }

@@ -10,12 +10,12 @@
   <body>
     <h1 class="visually-hidden">Сгенерировать график выбора личных проектов и график наставников на интенсиве</h1>
 
-    <section class="chart">
+    <section class="chart container">
       <h2 class="chart__title title">Сгенерировать график по статистике выбора личных проектов</h2>
 
-      <form class="chart__data" echo="#" method="POST">
+      <form class="chart__data" method="POST">
         <fieldset class="chart__course-selection">
-          <input class="chart__course-selection-item visually-hidden" id="html1" type="radio" name="course" value="html1">
+          <input class="chart__course-selection-item visually-hidden" id="html1" type="radio" name="course" value="html1" checked>
           <label class="chart__course-selection-title" for="html1">HTML и CSS, уровень 1</label>
 
           <input class="chart__course-selection-item visually-hidden" id="html2" type="radio" name="course" value="html2">
@@ -27,6 +27,40 @@
           <input class="chart__course-selection-item visually-hidden" id="js2" type="radio" name="course" value="js2">
           <label class="chart__course-selection-title" for="js2">JavaScript, уровень 2</label>
         </fieldset>
+
+        <fieldset class="chart__statistics">
+          <div class="chart__statistics-group">
+            <label class="chart__project-name" for="nerds">Нёрдс</label>
+            <input class="chart__percentage-number" id="nerds" type="number" name="nerds">
+            <span class="chart__percentage-sign">%</span>
+          </div>
+
+          <div class="chart__statistics-group">
+            <label class="chart__project-name" for="sedona">Седона</label>
+            <input class="chart__percentage-number" id="sedona" type="number" name="sedona">
+            <span class="chart__percentage-sign">%</span>
+          </div>
+
+          <div class="chart__statistics-group">
+            <label class="chart__project-name" for="technomart">Техномарт</label>
+            <input class="chart__percentage-number" id="technomart" type="number" name="technomart">
+            <span class="chart__percentage-sign">%</span>
+          </div>
+
+          <div class="chart__statistics-group">
+            <label class="chart__project-name" for="gllacy">Глейси</label>
+            <input class="chart__percentage-number" id="gllacy" type="number" name="gllacy">
+            <span class="chart__percentage-sign">%</span>
+          </div>
+
+          <div class="chart__statistics-group">
+            <label class="chart__project-name" for="device">Девайс</label>
+            <input class="chart__percentage-number" id="device" type="number" name="device">
+            <span class="chart__percentage-sign">%</span>
+          </div>
+        </fieldset>
+
+        <input class="chart__submit-button" type="submit" value="Сгенерировать график">
       </form>
     </section>
 

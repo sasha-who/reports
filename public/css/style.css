@@ -21,6 +21,8 @@ html, body {
 }
 
 body {
+  min-height: 100vh;
+
   font-family: "Comic Sans MS", cursive;
   font-style: normal;
   font-weight: normal;
@@ -28,7 +30,7 @@ body {
   line-height: 25px;
   color: #6f4575;
 
-  background-color: #f5edfc;
+  background: linear-gradient(45deg, #fbf7ff, #cbb4e0);
 }
 
 .container {
@@ -110,7 +112,7 @@ body {
 
   border: 1px solid #6f4575;
   border-radius: 5px;
-  background-color: #f5edfc;
+  background-color: transparent;
 }
 
 .data__submit-button {

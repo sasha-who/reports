@@ -6,12 +6,11 @@ export default class Statistics extends AbstractComponent {
     super();
 
     this._course = courseType;
+    this._courseProjects = allCourses[this._course];
   }
 
   getTemplate() {
-    const courseProjects = allCourses[this._course];
-
-    const projectTemplate = courseProjects
+    const projectTemplate = this._courseProjects
       .map((project) => {
         return (
           `<div class="data__statistics-group">
@@ -31,5 +30,22 @@ export default class Statistics extends AbstractComponent {
         ${projectTemplate}
       </fieldset>`
     );
+  }
+
+  implementStatistics() {
+    for (const project of this._courseProjects) {
+      const percentageInput = this.getElement().querySelector(`#${project.value}`);
+
+      project.percentage = percentageInput.value;
+    }
+  }
+
+  // Сбросить статистику после отрисовки графика
+  resetStatistics() {
+    for (const project of this._courseProjects) {
+      project.percentage = null;
+    }
+
+    console.log(this._courseProjects);
   }
 }

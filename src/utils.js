@@ -9,3 +9,8 @@ export const createElement = (temlate) => {
 export const render = (component, container) => {
   container.append(component.getElement());
 };
+
+export const remove = (component) => {
+  component.getElement().remove();
+  component.removeElement();
+};

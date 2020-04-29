@@ -4,5 +4,17 @@ import GenerateButtonComponent from "./components/generate-button.js";
 
 const chartElement = document.querySelector(`.chart`);
 
-render(new StatisticsComponent(`html1`), chartElement);
-render(new GenerateButtonComponent(), chartElement);
+const coursesRadioButtons = document.querySelectorAll(`input[name="course"]`);
+
+for (const button of coursesRadioButtons) {
+  button.addEventListener(`change`, () => {
+    const chartStatElement = chartElement.querySelector(`.chart__statistics`);
+    const chartSubmitButton = chartElement.querySelector(`.chart__submit-button`);
+
+    chartStatElement && chartStatElement.remove();
+    chartSubmitButton && chartSubmitButton.remove();
+
+    render(new StatisticsComponent(button.value), chartElement);
+    render(new GenerateButtonComponent(), chartElement);
+  });
+}

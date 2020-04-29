@@ -1,38 +1,32 @@
 const html1Projects = [
-  {
-    name: `Нёрдс`,
-    value: `nerds`,
-    percentage: 0
-  },
+  {name: `Нёрдс`, value: `nerds`},
+  {name: `Седона`, value: `sedona`},
+  {name: `Техномарт`, value: `technomart`},
+  {name: `Глейси`, value: `gllacy`},
+  {name: `Девайс`, value: `device`}
+];
 
-  {
-    name: `Седона`,
-    value: `sedona`,
-    percentage: 0
-  },
+const html2Projects = [
+  {name: `Пинк`, value: `pink`},
+  {name: `Седона`, value: `sedona`},
+  {name: `Кэт энерджи`, value: `cat-energy`},
+  {name: `Мишка`, value: `mishka`},
+  {name: `Погнали`, value: `pognali`}
+];
 
-  {
-    name: `Техномарт`,
-    value: `technomart`,
-    percentage: 0
-  },
+const js1Projects = [
+  {name: `Кекстаграм`, value: `kekstagram`},
+  {name: `Кексобукинг`, value: `keksobooking`}
+];
 
-  {
-    name: `Глейси`,
-    value: `gllacy`,
-    percentage: 0
-  },
-
-  {
-    name: `Девайс`,
-    value: `device`,
-    percentage: 0
-  }
+const js2Projects = [
+  {name: `Киноман`, value: `cinemaddict`},
+  {name: `Большое путешествие`, value: `big-trip`}
 ];
 
 export const allCourses = {
   html1: html1Projects,
-  // html2: html2Projects,
-  // js1: js1Projects,
-  // js2: js2Projects
+  html2: html2Projects,
+  js1: js1Projects,
+  js2: js2Projects
 };

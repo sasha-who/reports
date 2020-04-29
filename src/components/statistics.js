@@ -14,20 +14,20 @@ export default class Statistics extends AbstractComponent {
     const projectTemplate = courseProjects
       .map((project) => {
         return (
-          `<div class="chart__statistics-group">
-            <label class="chart__project-name" for="${project.value}">${project.name}</label>
-            <input class="chart__percentage-number"
+          `<div class="data__statistics-group">
+            <label class="data__project-name" for="${project.value}">${project.name}</label>
+            <input class="data__percentage-number"
             id="${project.value}"
             type="number"
             name="${project.value}">
-            <span class="chart__percentage-sign">%</span>
+            <span class="data__percentage-sign">%</span>
           </div>`
         );
       })
       .join(`\n`);
 
     return (
-      `<fieldset class="chart__statistics">
+      `<fieldset class="data__statistics">
         ${projectTemplate}
       </fieldset>`
     );

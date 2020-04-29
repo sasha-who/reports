@@ -8,24 +8,22 @@
     <title>Reports</title>
   </head>
   <body>
-    <h1 class="visually-hidden">Сгенерировать график выбора личных проектов и график наставников на интенсиве</h1>
+    <section class="data container">
+      <h1 class="data__title">Сгенерировать график по статистике выбора личных проектов</h1>
 
-    <section class="chart container">
-      <h2 class="chart__title title">Сгенерировать график по статистике выбора личных проектов</h2>
+      <form class="data__form" method="POST">
+        <fieldset class="data__course-selection">
+          <input class="data__course-selection-item visually-hidden" id="html1" type="radio" name="course" value="html1">
+          <label class="data__course-selection-title" for="html1">HTML и CSS, уровень 1</label>
 
-      <form class="chart__data" method="POST">
-        <fieldset class="chart__course-selection">
-          <input class="chart__course-selection-item visually-hidden" id="html1" type="radio" name="course" value="html1">
-          <label class="chart__course-selection-title" for="html1">HTML и CSS, уровень 1</label>
+          <input class="data__course-selection-item visually-hidden" id="html2" type="radio" name="course" value="html2">
+          <label class="data__course-selection-title" for="html2">HTML и CSS, уровень 2</label>
 
-          <input class="chart__course-selection-item visually-hidden" id="html2" type="radio" name="course" value="html2">
-          <label class="chart__course-selection-title" for="html2">HTML и CSS, уровень 2</label>
+          <input class="data__course-selection-item visually-hidden" id="js1" type="radio" name="course" value="js1">
+          <label class="data__course-selection-title" for="js1">JavaScript, уровень 1</label>
 
-          <input class="chart__course-selection-item visually-hidden" id="js1" type="radio" name="course" value="js1">
-          <label class="chart__course-selection-title" for="js1">JavaScript, уровень 1</label>
-
-          <input class="chart__course-selection-item visually-hidden" id="js2" type="radio" name="course" value="js2">
-          <label class="chart__course-selection-title" for="js2">JavaScript, уровень 2</label>
+          <input class="data__course-selection-item visually-hidden" id="js2" type="radio" name="course" value="js2">
+          <label class="data__course-selection-title" for="js2">JavaScript, уровень 2</label>
         </fieldset>
       </form>
     </section>

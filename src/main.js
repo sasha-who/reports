@@ -2,19 +2,19 @@ import {render} from "./utils.js";
 import StatisticsComponent from "./components/statistics.js";
 import GenerateButtonComponent from "./components/generate-button.js";
 
-const chartElement = document.querySelector(`.chart`);
+const dataElement = document.querySelector(`.data`);
 
 const coursesRadioButtons = document.querySelectorAll(`input[name="course"]`);
 
 for (const button of coursesRadioButtons) {
   button.addEventListener(`change`, () => {
-    const chartStatElement = chartElement.querySelector(`.chart__statistics`);
-    const chartSubmitButton = chartElement.querySelector(`.chart__submit-button`);
+    const dataStatElement = dataElement.querySelector(`.data__statistics`);
+    const dataSubmitButton = dataElement.querySelector(`.data__submit-button`);
 
-    chartStatElement && chartStatElement.remove();
-    chartSubmitButton && chartSubmitButton.remove();
+    dataStatElement && dataStatElement.remove();
+    dataSubmitButton && dataSubmitButton.remove();
 
-    render(new StatisticsComponent(button.value), chartElement);
-    render(new GenerateButtonComponent(), chartElement);
+    render(new StatisticsComponent(button.value), dataElement);
+    render(new GenerateButtonComponent(), dataElement);
   });
 }

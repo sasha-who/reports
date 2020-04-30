@@ -1,6 +1,10 @@
 import {render, remove} from "./utils.js";
 import StatisticsComponent from "./components/statistics.js";
 import GenerateButtonComponent from "./components/generate-button.js";
+import {renderChart} from "./chart-render.js";
+import {html1Projects} from "./data.js";
+
+renderChart(html1Projects);
 
 const dataFormElement = document.querySelector(`.data__form`);
 const coursesRadioButtons = dataFormElement
@@ -24,7 +28,7 @@ for (const button of coursesRadioButtons) {
       evt.preventDefault();
 
       const projectWithData = statisticsComponent.getProjectStatistics();
-
+      renderChart(projectWithData);
       dataFormElement.reset();
       remove(statisticsComponent);
       remove(generateButtonComponent);

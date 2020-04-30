@@ -115,16 +115,18 @@ body {
   background-color: transparent;
 }
 
-.data__submit-button {
-  margin: 0;
-  padding: 5px;
-
+.button {
   color: #6f4575;
 
   border: 1px solid #6f4575;
   border-radius: 5px;
   background-color: #f5edfc;
   cursor: pointer;
+}
+
+.data__submit-button {
+  margin: 0;
+  padding: 5px;
 }
 
 .data__submit-button:hover,

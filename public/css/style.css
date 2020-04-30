@@ -41,9 +41,18 @@ body {
   box-sizing: border-box;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .data__title {
+  width: 100%;
+
   font-size: 24px;
   line-height: 30px;
+  text-align: center;
 }
 
 .data__form {
@@ -116,20 +125,35 @@ body {
 }
 
 .button {
+  display: block;
+  padding: 5px;
+
   color: #6f4575;
 
   border: 1px solid #6f4575;
   border-radius: 5px;
-  background-color: #f5edfc;
+  background-color: transparent;
   cursor: pointer;
 }
 
 .data__submit-button {
   margin: 0;
-  padding: 5px;
 }
 
 .data__submit-button:hover,
 .data__submit-button:focus {
   background-color: #ae95c7;
+}
+
+.chart__content {
+  width: 750px;
+  min-height: 450px;
+  margin-bottom: 20px;
+
+  border: 1px solid #6f4575;
+  border-radius: 20px;
+}
+
+.chart__button {
+  margin: 0 auto;
 }

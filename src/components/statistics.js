@@ -32,11 +32,14 @@ export default class Statistics extends AbstractComponent {
     );
   }
 
-  implementStatistics() {
+  getProjectStatistics() {
     for (const project of this._courseProjects) {
       const percentageInput = this.getElement().querySelector(`#${project.value}`);
 
-      project.percentage = percentageInput.value;
+      const projectWithData = Object.assign({}, project);
+      projectWithData.percentage = percentageInput.value;
+
+      return projectWithData;
     }
   }
 

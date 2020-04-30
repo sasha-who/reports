@@ -32,23 +32,24 @@ export default class Statistics extends AbstractComponent {
     );
   }
 
-  getProjectStatistics() {
-    for (const project of this._courseProjects) {
+  getProjectsStatistics() {
+    const projectsWithData = this._courseProjects.slice();
+
+    for (const project of projectsWithData) {
       const percentageInput = this.getElement().querySelector(`#${project.value}`);
 
-      const projectWithData = Object.assign({}, project);
-      projectWithData.percentage = percentageInput.value;
-
-      return projectWithData;
+      project.percentage = percentageInput.value;
     }
+
+    return projectsWithData;
   }
 
   // Сбросить статистику после отрисовки графика
   resetStatistics() {
-    for (const project of this._courseProjects) {
+    const projectsWithData = this.getProjectsStatistics();
+
+    for (const project of projectsWithData) {
       project.percentage = null;
     }
-
-    console.log(this._courseProjects);
   }
 }

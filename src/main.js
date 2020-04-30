@@ -27,8 +27,9 @@ for (const button of coursesRadioButtons) {
     dataFormElement.addEventListener(`submit`, (evt) => {
       evt.preventDefault();
 
-      const projectWithData = statisticsComponent.getProjectStatistics();
-      renderChart(projectWithData);
+      // const projectsWithData = statisticsComponent.getProjectsStatistics();
+      // renderChart(projectsWithData);
+
       dataFormElement.reset();
       remove(statisticsComponent);
       remove(generateButtonComponent);

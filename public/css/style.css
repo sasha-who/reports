@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 50px;
 }
 
 .data__title {
@@ -148,12 +149,16 @@ body {
 .chart__content {
   width: 750px;
   min-height: 450px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   border: 1px solid #6f4575;
   border-radius: 20px;
 }
 
 .chart__button {
+  width: 180px;
   margin: 0 auto;
+
+  text-align: center;
+  text-decoration: none;
 }

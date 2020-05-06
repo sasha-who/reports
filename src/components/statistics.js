@@ -18,7 +18,9 @@ export default class Statistics extends AbstractComponent {
             <input class="data__percentage-number"
             id="${project.value}"
             type="number"
-            name="${project.value}">
+            name="${project.value}"
+            min="0"
+            max="100">
             <span class="data__percentage-sign">%</span>
           </div>`
         );

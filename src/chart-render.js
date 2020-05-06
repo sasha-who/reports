@@ -1,5 +1,5 @@
-const canvas = document.querySelector(`#canvas`);
-const ctx = canvas.getContext('2d');
+const GAP = 20;
+const MAX_PERCENTAGE = 100;
 
 const BarCoordinate = {
   INIT_X: 400,
@@ -17,12 +17,13 @@ const LabelCoordinate = {
 };
 
 const Font = {
-  FAMILY: `Comic Sans MS`,
-  SIZE: `25px`
+  FAMILY: `Arial`,
+  SIZE: `30px`
 };
 
-const GAP = 20;
-const MAX_PERCENTAGE = 100;
+const chartButton = document.querySelector(`.chart__button`);
+const canvas = document.querySelector(`#canvas`);
+const ctx = canvas.getContext('2d');
 
 export const renderChart = (projectsWithData) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -44,4 +45,9 @@ export const renderChart = (projectsWithData) => {
     currentBarY += gap;
     currentLabelY += gap;
   }
+
+  chartButton.addEventListener(`click`, () => {
+    const imgURI = canvas.toDataURL();
+    chartButton.href = imgURI;
+  });
 };

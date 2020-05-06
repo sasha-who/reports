@@ -44,8 +44,7 @@ export default class Statistics extends AbstractComponent {
     return projectsWithData;
   }
 
-  // Сбросить статистику после отрисовки графика
-  resetStatistics() {
+  reset() {
     const projectsWithData = this.getProjectsStatistics();
 
     for (const project of projectsWithData) {

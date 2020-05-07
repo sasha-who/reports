@@ -1,26 +1,12 @@
-const GAP = 20;
-const MAX_PERCENTAGE = 100;
-const INITIAL_DPI = 96;
-
-const BarCoordinate = {
-  INIT_X: 320,
-  INIT_Y: 60
-};
-
-const BarSize = {
-  MAX_WIDTH: 400,
-  HEIGHT: 50
-};
-
-const LabelCoordinate = {
-  INIT_X: 20,
-  INIT_Y: 90
-};
-
-const Font = {
-  FAMILY: `Comic Sans MS`,
-  SIZE: `25px`
-};
+import {
+  GAP,
+  MAX_PERCENTAGE,
+  INITIAL_DPI,
+  BarCoordinate,
+  BarSize,
+  LabelCoordinate,
+  Font
+} from "./const.js";
 
 const chartButton = document.querySelector(`.chart__button`);
 const canvas = document.querySelector(`#canvas`);

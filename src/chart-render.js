@@ -1,10 +1,13 @@
 import {
   GAP,
   MAX_PERCENTAGE,
+  MIN_PERCENTAGE_FOR_RENDER,
   INITIAL_DPI,
+  DEFAULT_COLOR,
   BarCoordinate,
   BarSize,
   LabelCoordinate,
+  PercentageCoordinate,
   Font
 } from "./const.js";
 
@@ -42,6 +45,7 @@ export const renderChart = (projectsWithData) => {
   const sortedProjects = projectsWithData.slice().sort((a, b) => a.percentage - b.percentage);
   let currentBarY = BarCoordinate.INIT_Y;
   let currentLabelY = LabelCoordinate.INIT_Y;
+  let currentPercentageY = PercentageCoordinate.INIT_Y;
 
   for (const project of sortedProjects) {
     const percentage = project.percentage;
@@ -52,9 +56,21 @@ export const renderChart = (projectsWithData) => {
     ctx.font = `${Font.SIZE} ${Font.FAMILY}`;
     ctx.fillText(`${project.name}`, LabelCoordinate.INIT_X, currentLabelY);
     ctx.fillRect(BarCoordinate.INIT_X, currentBarY, barWidth, BarSize.HEIGHT);
+    ctx.fillStyle = DEFAULT_COLOR;
+
+    switch (true) {
+      case percentage < MIN_PERCENTAGE_FOR_RENDER:
+        ctx.fillText(`${percentage}%`, PercentageCoordinate.INIT_X + barWidth, currentPercentageY);
+        break;
+
+      default:
+        ctx.fillText(`${percentage}%`, PercentageCoordinate.INIT_X, currentPercentageY);
+        break;
+    }
 
     currentBarY += gap;
     currentLabelY += gap;
+    currentPercentageY += gap;
   }
 
   chartButton.addEventListener(`click`, () => {

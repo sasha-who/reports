@@ -8,18 +8,15 @@ const dataFormElement = document.querySelector(`.data__form`);
 const coursesRadioButtons = dataFormElement
   .querySelectorAll(`.data__course-selection-item[name="course"]`);
 
-  let statisticsComponent = null;
-  let generateButtonComponent = null;
+let statisticsComponent = null;
+let generateButtonComponent = null;
+let alertComponent = null;
 
 for (const button of coursesRadioButtons) {
   button.addEventListener(`change`, () => {
-    const dataStatElement = dataFormElement.querySelector(`.data__statistics`);
-    const dataSubmitElement = dataFormElement.querySelector(`.data__submit-button`);
-    const alertElement = dataFormElement.querySelector(`.data__alert`);
-
-    dataStatElement && dataStatElement.remove();
-    dataSubmitElement && dataSubmitElement.remove();
-    alertElement && alertElement.remove();
+    statisticsComponent && remove(statisticsComponent);
+    generateButtonComponent && remove(generateButtonComponent);
+    alertComponent && remove(alertComponent);
 
     statisticsComponent = new StatisticsComponent(button.value);
     generateButtonComponent = new GenerateButtonComponent();
@@ -37,16 +34,22 @@ dataFormElement.addEventListener(`submit`, (evt) => {
     .reduce((sum, current) => sum + Number(current.percentage), 0);
 
   if (percentageSum !== 100) {
-    // Добавить отмену отрисовку надписи, если одна уже есть
-    const alertComponent = new AlertComponent();
+
+
+    if (alertComponent) {
+      return;
+    }
+
+    alertComponent = new AlertComponent();
     render(alertComponent, dataFormElement);
-    statisticsComponent.reset();
+
     return;
   }
 
   renderChart(projectsWithData);
-  statisticsComponent.reset();
   dataFormElement.reset();
+  statisticsComponent.reset();
   remove(statisticsComponent);
   remove(generateButtonComponent);
+  alertComponent && remove(alertComponent);
 });

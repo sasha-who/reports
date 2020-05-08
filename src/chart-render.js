@@ -60,6 +60,7 @@ export const renderChart = (projectsWithData) => {
 
     switch (true) {
       case percentage < MIN_PERCENTAGE_FOR_RENDER:
+        ctx.fillStyle = project.color;
         ctx.fillText(`${percentage}%`, PercentageCoordinate.INIT_X + barWidth, currentPercentageY);
         break;
 

@@ -1,0 +1,66 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Comic Sans MS", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #220c38;
+
+  background-color: #f5edfc;
+}
+
+.chart__course-selection {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+}
+
+.chart__course-selection-title {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.chart__course-selection-title::before {
+  content: "";
+
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ae95c7;
+  border-radius: 50%;
+}
+
+.chart__course-selection-item:checked + .chart__course-selection-title::before {
+  background-color: #220c38;
+}

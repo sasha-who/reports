@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reports</title>
+  </head>
+  <body>
+    <div class="content-wrapper container">
+      <h1 class="data__title">Сгенерировать график по статистике выбора личных проектов</h1>
+
+      <section class="data">
+        <form class="data__form" echo="#" method="POST">
+          <fieldset class="data__course-selection">
+            <input class="data__course-selection-item visually-hidden" id="html1" type="radio" name="course" value="html1">
+            <label class="data__course-selection-title" for="html1">HTML и CSS, уровень 1</label>
+
+            <input class="data__course-selection-item visually-hidden" id="html2" type="radio" name="course" value="html2">
+            <label class="data__course-selection-title" for="html2">HTML и CSS, уровень 2</label>
+
+            <input class="data__course-selection-item visually-hidden" id="js1" type="radio" name="course" value="js1">
+            <label class="data__course-selection-title" for="js1">JavaScript, уровень 1</label>
+
+            <input class="data__course-selection-item visually-hidden" id="js2" type="radio" name="course" value="js2">
+            <label class="data__course-selection-title" for="js2">JavaScript, уровень 2</label>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="chart">
+        <div class="chart__content">
+          <canvas id="canvas" width="750" height="450">Ваш браузер не поддерживает эту технологию</canvas>
+        </div>
+
+        <a class="chart__button button" download="chart.png">Сохранить график</a>
+      </section>
+    </div>
+
+    <script src="./bundle.js"></script>
+  </body>
+</html>

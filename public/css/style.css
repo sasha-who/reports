@@ -1,0 +1,166 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: "Comic Sans MS", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #572f70;
+
+  background: linear-gradient(45deg, #d9e6fa, #94b7eb);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+.data__title {
+  width: 100%;
+
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.data__form {
+  max-width: 500px;
+}
+
+.data__course-selection {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  border: none;
+}
+
+.data__course-selection-title {
+  position: relative;
+
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.data__course-selection-title::before {
+  content: "";
+
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 0;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: #e2d8e8;
+  border: 1px solid #572f70;
+  border-radius: 50%;
+}
+
+.data__course-selection-item:checked + .data__course-selection-title::before {
+  background-color: #572f70;
+}
+
+.data__statistics {
+  display: flex;
+  flex-direction: row;
+  max-width: 200px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  border: none;
+}
+
+.data__statistics-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.data__percentage-number {
+  max-width: 50px;
+  margin-left: auto;
+  margin-right: 5px;
+
+  color: #572f70;
+
+  border: 1px solid #572f70;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.button {
+  display: block;
+  padding: 5px;
+
+  color: #572f70;
+
+  border: 1px solid #572f70;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #e2d8e8;
+}
+
+.data__submit-button {
+  margin: 0;
+}
+
+.chart__content {
+  width: 750px;
+  min-height: 450px;
+  margin-bottom: 15px;
+
+  border: 1px solid #572f70;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.chart__button {
+  width: 180px;
+  margin: 0 auto;
+
+  text-align: center;
+  text-decoration: none;
+}

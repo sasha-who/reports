@@ -379,7 +379,7 @@ const PercentageCoordinate = {
 }
 
 const Font = {
-  FAMILY: `Comic Sans MS`,
+  FAMILY: `Muller`,
   SIZE: `25px`
 };
 

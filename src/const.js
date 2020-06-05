@@ -25,6 +25,6 @@ export const PercentageCoordinate = {
 }
 
 export const Font = {
-  FAMILY: `Comic Sans MS`,
+  FAMILY: `Muller`,
   SIZE: `25px`
 };

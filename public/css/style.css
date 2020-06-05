@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -23,7 +31,7 @@ html, body {
 body {
   min-height: 100vh;
 
-  font-family: "Comic Sans MS", cursive;
+  font-family: "Muller", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

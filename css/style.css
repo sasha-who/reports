@@ -106,7 +106,7 @@ body {
 
 .data__statistics {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 200px;
   margin: 0;
   margin-bottom: 40px;
